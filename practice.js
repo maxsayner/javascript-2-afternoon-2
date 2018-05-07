@@ -146,6 +146,16 @@ var getRandomArbitrary = function() {
   Loop through the array to see if that random number is in the array. 
   If it is, return true, if it's not, return false
 */
+function finder(numbers) {
+  var randomNum = '';
+  for(var i = 0; i < numbers.length; i++) {
+    if(!randomNum === numbers)
+    return false;
+  }
+  
+  getRandomArbitrary();
+  }
+
 
 
 
@@ -175,8 +185,19 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, itemToBeRemoved) {
+  var newGroceryList;
+  for(var i = 0; i < myGroceryList.length; i++) {
+    if (chip === myGroceryList) {
+      myGroceryList.splice([i]);
+    }
+    return newGroceryList;
+  }
 
+}
+function addItem(myGroceryList, itemToBeAdded) {
+
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -185,7 +206,17 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker(arr) {
+var fillArray = '';
+arr.fill(1,215);
+return arr;
+}
+
+
+
+
+
+
 
 
 
