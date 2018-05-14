@@ -89,7 +89,7 @@ function evenFinder(nums){
   var evenNumbers = [];
   for(var i = 0; i < nums.length; i++) {
     if (nums[i] % 2 === 0){
-      evenNumbers.push(nums[i]);
+    evenNumbers.push(nums[i]);
     }
 
       
@@ -145,17 +145,21 @@ var getRandomArbitrary = function() {
   It will then  get a random number (by invoking getRandomArbitrary).
   Loop through the array to see if that random number is in the array. 
   If it is, return true, if it's not, return false
-*/
-function finder(numbers) {
-  var randomNum = '';
-  for(var i = 0; i < numbers.length; i++) {
-    if(!randomNum === numbers)
-    return false;
-  }
-  
-  getRandomArbitrary();
-  }
+  */
 
+ 
+  function finder(arr) {
+    var randomNum = getRandomArbitrary();
+
+    for(var i = 0; i < arr.length; i++) {
+      if(arr[i] === randomNum) {
+        return true
+      }
+    }
+    return false
+    
+  }
+ 
 
 
 
@@ -186,18 +190,34 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, itemToBeRemoved) {
-  var newGroceryList;
-  for(var i = 0; i < myGroceryList.length; i++) {
-    if (chip === myGroceryList) {
-      myGroceryList.splice([i]);
+  if(!myGroceryList || !itemToBeRemoved) {
+    return [];
+  
+  } else {
+    for(var i = 0; i <= myGroceryList.length; i++) {
+      if (myGroceryList[i] === itemToBeRemoved ) {
+      
+      myGroceryList.splice(myGroceryList[i],1);
     }
-    return newGroceryList;
+      return myGroceryList;
   }
+}
 
 }
 function addItem(myGroceryList, itemToBeAdded) {
-
+  if(!myGroceryList || !itemToBeAdded) {
+  return [];
+  } else {
+    myGroceryList.push(itemToBeAdded) 
+    return myGroceryList;
+    
+  }
+  
+  
 }
+
+
+
 
 
 ////////// PROBLEM 9 //////////
@@ -206,11 +226,14 @@ function addItem(myGroceryList, itemToBeAdded) {
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-function maker(arr) {
-var fillArray = '';
-arr.fill(1,215);
-return arr;
-}
+// function maker() {
+//   var Arr = [];
+//   for(var i = 1; arr.length <= 215; i++) {
+//     Arr.push(i);
+    
+//   }
+//   return Arr;
+// }
 
 
 
@@ -231,11 +254,21 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Return a new array after adding ten to each item in numbers. 
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
-  
-//Code Here
+   
+function addTen(numbers) {
+  var newArr = [];
+  for(var i = 0; i < numbers.length; i++) {
+    // var addTo = Number(numbers[i]) += 10;
+    numbers[i] = Number(numbers[i])
+    var addTo = numbers[i] += 10;
+    newArr.push(addTo)
+    
+  }
+ 
+  return newArr;
+}
 
-
-
+addTen(numbers)
 ////////// PROBLEM 11 //////////
 
 // Do not edit the code below.
